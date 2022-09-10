@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+:root {
+--T1BVeryDarkBg: hsl(222, 26%, 31%);
+--T1BVeryDarkToogle: hsl(223, 31%, 20%);
+--T1BVeryDarkScreenBg:  hsl(224, 36%, 15%);
+--T1KDesaturatedDarkBlueKey:  hsl(225, 21%, 49%);
+--T1KRed: hsl(6, 63%, 50%);
+--T1KDarkRed: hsl(6, 70%, 34%);
+--T1KLightGrayish: hsl(30, 25%, 89%);
+--T1KGrayishOrange: hsl(28, 16%, 65%);
+--T1TVeryDarkGrayishBlue: hsl(221, 14%, 31%);
+
+--T2BLightGrayBg: hsl(0, 0%, 90%);
+--T2BGrayishRedToggle: hsl(0, 5%, 81%);
+--T2BVeryLightGray: hsl(0, 0%, 93%);
+
+--T2KDarkModerateCyan: hsl(185, 42%, 37%);
+--T2KVeryDarkCyan: hsl(185, 58%, 25%);
+--T2KOrange: hsl(25, 98%, 40%);
+--T2KDarkOrange: hsl(25, 99%, 27%);
+--T2KLightGrayishYellow: hsl(45, 7%, 89%);
+--T2KDarkGrayishOrange:  hsl(35, 11%, 61%);
+
+--T2TVeryDarkGrayishYellow: hsl(60, 10%, 19%);
+--White: hsl(0, 0, 100%);
+
+--T3BVeryDarkVioletBg: hsl(268, 75%, 9%);
+--T3BVeryDarkVioletToogle:  hsl(268, 71%, 12%);
+
+--T3KDarkViolet: hsl(281, 89%, 26%);
+--T3KVividMagenta:  hsl(285, 91%, 52%);
+--T3KPureCyan:  hsl(176, 100%, 44%);
+--T3KSoftCyan: hsl(177, 92%, 70%);
+--T3KVeryDarkViolet:  hsl(268, 47%, 21%);
+--T3KDarkMagenta:  hsl(290, 70%, 36%);
+
+--T3TLightYellow: hsl(52, 100%, 62%);
+--T3TDarkBlue:  hsl(198, 20%, 13%);
+--T3TWhite: hsl(0, 0, 100%);
+}
+
+* {
+    font-family: 'League Spartan', sans-serif;
+    transition: all .3s ease;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--T1BVeryDarkBg);
+   
+}
+
+
+.container {
+    max-width: 475px;
+    background-color: var(--T1BVeryDarkBg);
+    padding: 10px 10px;
+}
+
+.tittle {
+ display: flex;
+ justify-content: space-between;
+ align-items: flex-end; 
+ color: #fff;
+ margin-bottom: 25px;
+}
+
+.tittle .theme {
+    display: flex;
+    align-items: flex-end;
+}
+.tittle .theme > span {
+    padding-bottom: 2px;
+    padding-right: 30px;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+
+.tittle .theme .theme-numbers {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.tittle .theme .theme-n {
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+    margin-bottom: 1px;
+}
+
+input[type=range] {
+    -webkit-appearance: none; 
+    background: transparent; 
+    width: 60px;
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  
+  input[type=range]:focus {
+    outline: none; 
+  }
+  
+  input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: var(--T2KOrange);
+    cursor: pointer;
+    margin-top: 3.5px;
+  }
+  input[type=range]::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: var(--T2KOrange);
+    cursor: pointer;
+    margin-top: 2.5px;
+   
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 22px;
+    cursor: pointer;
+    background: var(--T1BVeryDarkToogle);
+    border-radius: 10px;
+    padding: 0px 5px;
+  }
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 20px;
+    cursor: pointer;
+    background: var(--T1BVeryDarkToogle);
+    border-radius: 10px;
+}
+
+
+.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 25px;
+    border-radius: 8px;
+    background-color: var(--T1BVeryDarkScreenBg);
+    margin-bottom: 15px;
+    height: 130px;
+    align-items: flex-end;
+    font-weight: 700;
+    color: #fff;
+}
+
+.display .display-previous {
+    font-size: 22px;
+    flex-wrap: wrap;
+}
+
+.display .display-actual {
+    font-size: 35px;
+    overflow: hidden;
+    word-break: break-all
+    
+}
+
+.calculator {
+    border-radius: 8px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    background-color: var(--T1BVeryDarkToogle);
+    gap: 18px;
+}
+.calculator .span {
+    grid-column: span 2;
+}
+
+
+.calculator button {
+    display: flex;
+    justify-content: center;
+    background-color: var(--T1KLightGrayish); 
+    border-radius: 8px;
+    border: none;
+    border-bottom: 4px solid;
+    border-color: var(--T1KGrayishOrange);
+    cursor: pointer;
+    color: var(--T1TVeryDarkGrayishBlue);
+    font-size: 28px;
+    padding: 7px 20px;
+    padding-top: 12px;
+    transition: all .3s ease;
+    font-weight: 700;
+}
+
+.calculator button:hover {
+    background-color: #fff;
+}
+
+.calculator .erase, .calculator .reset{
+    background-color: var(--T1KDesaturatedDarkBlueKey);
+    border-color: var(--T1BVeryDarkBg);
+    color: #fff;
+}
+
+.calculator .erase:hover, .calculator .reset:hover {
+    background-color: var(--T1KDesaturatedDarkBlueKey);
+    filter: brightness(160%);
+}
+
+.calculator .equal {
+    color: #fff;
+    background-color: var(--T1KRed);
+    border-color: var(--T1KDarkRed);
+}
+
+.calculator .equal:hover {
+    background-color: var(--T1KRed);
+    filter: brightness(200%);
+
+}
+
+
+.theme2 {
+    background-color: var(--T2BLightGrayBg);
+}
+
+.theme2 .container {
+    background-color: var(--T2BLightGrayBg);
+}
+
+.theme2 .tittle {
+ color: var(--T2TVeryDarkGrayishYellow);
+
+}
+
+.theme2 input[type=range]::-webkit-slider-thumb {
+
+    background: var(--T2KOrange);
+
+  }
+
+  .theme2 input[type=range]::-moz-range-thumb {
+
+    background-color: var(--T2KOrange);
+  }
+
+  .theme2 input[type=range]::-webkit-slider-runnable-track {
+    background: var(--T2BGrayishRedToggle);
+
+  }
+
+  .theme2 input[type=range]::-moz-range-track {
+    background: var(--T2BGrayishRedToggle);
+
+}
+
+
+.theme2 .display {
+    background-color: var(--T2BVeryLightGray);
+    color: var(--T2TVeryDarkGrayishYellow);
+}
+
+
+
+.theme2 .calculator {
+
+    background-color: var(--T2BGrayishRedToggle);
+
+}
+
+
+.theme2 .calculator button {
+
+    background-color: var(--T2KLightGrayishYellow); 
+    border-color: var(--T2KDarkGrayishOrange);
+    color: var(--T2TVeryDarkGrayishYellow);
+
+}
+
+.theme2 .calculator button:hover {
+    background-color: #fff;
+}
+
+.theme2 .calculator .erase, .theme2 .calculator .reset{
+    background-color: var(--T2KDarkModerateCyan);
+    border-color: var(--T2KVeryDarkCyan);
+    color: #fff;
+}
+
+.theme2 .calculator .erase:hover, .theme2 .calculator .reset:hover {
+    background-color: var(--T2KDarkModerateCyan);
+    filter: brightness(145%);
+}
+
+.theme2 .calculator .equal {
+    color: #fff;
+    background-color: var(--T2KOrange);
+    border-color: var(--T2KDarkOrange);
+}
+
+.theme2 .calculator .equal:hover {
+    background-color: var(--T2KOrange);
+    filter: brightness(150%);
+
+}
+/* ---- Theme 3 ---- */
+.theme3 {
+    background-color: var(--T3BVeryDarkVioletBg);
+}
+
+.theme3 .container {
+    background-color: var(--T3BVeryDarkVioletBg);;
+}
+
+.theme3 .tittle {
+ color: var(--T3TLightYellow);
+
+}
+
+.theme3 input[type=range]::-webkit-slider-thumb {
+
+    background: var(--T3KSoftCyan);
+
+  }
+
+  .theme3 input[type=range]::-moz-range-thumb {
+
+    background-color: var(--T3KSoftCyan);
+  }
+
+  .theme3 input[type=range]::-webkit-slider-runnable-track {
+    background: var(--T3BVeryDarkVioletToogle);
+
+  }
+
+  .theme3 input[type=range]::-moz-range-track {
+    background: var(--T3BVeryDarkVioletToogle);
+
+}
+
+
+.theme3 .display {
+    background-color: var(--T3BVeryDarkVioletToogle);
+    color: var(--T3TLightYellow);
+}
+
+
+
+.theme3 .calculator {
+
+    background-color: var(--T3BVeryDarkVioletToogle)
+
+}
+
+
+.theme3 .calculator button {
+
+    background-color: var(--T3KVeryDarkViolet); 
+    border-color: var(--T3KDarkMagenta);
+    color: var(--T3TLightYellow);
+
+}
+
+.theme3 .calculator button:hover {
+    background-color: var(--T3KDarkViolet);
+    filter: brightness(140%);
+}
+
+.theme3 .calculator .erase, .theme3 .calculator .reset{
+    background-color: var(--T3KDarkMagenta);
+    border-color: var(--T3KVividMagenta);
+    color: #fff;
+}
+
+.theme3 .calculator .erase:hover, .theme3 .calculator .reset:hover {
+    background-color: var(--T3KDarkMagenta);
+    filter: brightness(130%);
+}
+
+.theme3 .calculator .equal {
+    color: var(--T3TDarkBlue);
+    background-color: var(--T3KSoftCyan);
+    border-color: var(--T3KPureCyan);
+}
+
+.theme3 .calculator .equal:hover {
+    background-color: var(--T3KSoftCyan);
+    filter: brightness(150%);
+
+}
